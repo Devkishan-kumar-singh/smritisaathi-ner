@@ -1,0 +1,8 @@
+# Rename this file to exactly: .env
+# In Windows File Explorer enable View > Show > File name extensions first.
+
+SUPABASE_URL=https://YOUR_PROJECT_REFERENCE.supabase.co
+SUPABASE_ANON_KEY=sb_publishable_REPLACE_WITH_YOUR_KEY
+PORT=3000
+
+# Do not add SUPABASE_SECRET_KEY or service_role here.

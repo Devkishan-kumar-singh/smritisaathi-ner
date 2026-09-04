@@ -1,0 +1,9 @@
+{
+  "name":"smritisaathi-ner-v2",
+  "version":"2.0.0",
+  "private":true,
+  "description":"SIH 26003 multi-family cognitive engagement prototype",
+  "scripts":{"start":"node server.js","check":"node --check server.js && node --check public/app.js"},
+  "dependencies":{},
+  "engines":{"node":">=20"}
+}
