@@ -1,31 +1,31 @@
-# SmritiSaathi NER v3 — Final Deployment Steps
+# SmritiSaathi NER v5 — Final Deployment Steps
 
 ## 1. Update the existing Supabase database
 
-Open Supabase **SQL Editor**, paste all contents of `supabase/migration_v3_auth_onboarding.sql`, and run it once. This enables a newly verified user to create an isolated family and patient profile.
+Open Supabase **SQL Editor**, paste all contents of `supabase/migration_v4_family_code_shared_roles.sql`, and run it once. This enables secure onboarding, assigns a readable unique family ID, and updates existing families.
 
-## 2. Connect Resend to Supabase Auth
+## 2. OTP/Resend status
 
-1. Verify a sending domain and create an API key in Resend.
-2. In Supabase open **Authentication → Email/Notifications → SMTP Settings**.
-3. Enable custom SMTP and enter:
-   - Host: `smtp.resend.com`
-   - Port: `465`
-   - Username: `resend`
-   - Password: your Resend API key
-   - Sender: an email address on the verified domain
-4. Edit the Supabase sign-in/magic-link email template and display `{{ .Token }}` as the one-time code.
-5. Never put the Resend API key in Render, GitHub, `.env`, or frontend code.
+This build does not change Bhashini or Resend. Keep the existing password authentication working. Connect custom OTP email delivery later, after the offline-first patient workflow is accepted.
 
 ## 3. Deploy through the existing GitHub and Render service
 
-Replace the existing project contents with this package, but keep your local `.env` file private. Commit and push to the same `main` branch. Render needs only `SUPABASE_URL` and `SUPABASE_ANON_KEY`; no new Render secret is required.
+Replace the existing project contents with this package, but keep your local `.env` file private. Commit and push to the same `main` branch. Render uses the same existing Supabase environment variables; this update adds no new secret.
 
 ## 4. Final checks
 
 - Test password sign-up, email confirmation, and password login.
 - Test email OTP request and six-digit code verification.
 - Test first-time family setup.
+- Confirm the unique family ID appears after login.
+- Confirm the shared login asks the user to choose Patient or Caregiver.
 - Log out, sign in again, and confirm the same family data appears.
 - Confirm another account cannot access the first family's photos or records.
-- Hard-refresh once after deployment so service-worker version 6 replaces the previous cache.
+- On a phone, confirm the page has no horizontal overflow and all four bottom-navigation items remain visible.
+- Choose a voice in Settings, press **Test reminder voice**, and confirm the choice remains after refresh.
+- Add a family photo with a personal clue; confirm the clue is spoken in the family-recognition activity.
+- While the page is open, turn off the internet, add a reminder/photo/game result, restore the internet and confirm automatic sync.
+- Refresh while using the Patient dashboard and confirm the same role/page returns without another role selection.
+- Hard-refresh once after deployment so service-worker version 8 replaces the previous cache. If an old layout remains, clear this site's cached data once and reopen it.
+
+Audible reminders work online and offline while the site/PWA is open. A fully closed browser cannot be awakened reliably by this web prototype.

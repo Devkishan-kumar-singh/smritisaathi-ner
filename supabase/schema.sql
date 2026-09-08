@@ -1,6 +1,6 @@
 create extension if not exists pgcrypto;
 create type public.user_role as enum ('caregiver','patient','health_worker');
-create table public.families(id uuid primary key default gen_random_uuid(),name text not null,created_at timestamptz not null default now());
+create table public.families(id uuid primary key default gen_random_uuid(),name text not null,family_code text not null unique default('FAM-'||upper(substr(replace(gen_random_uuid()::text,'-',''),1,8))),created_at timestamptz not null default now());
 create table public.profiles(id uuid primary key references auth.users(id) on delete cascade,family_id uuid not null references public.families(id) on delete cascade,role public.user_role not null,display_name text not null,preferred_language text not null default 'en',created_at timestamptz not null default now());
 create index profiles_family_idx on public.profiles(family_id);
 create table public.patients(id uuid primary key default gen_random_uuid(),family_id uuid not null references public.families(id) on delete cascade,profile_id uuid unique references public.profiles(id) on delete set null,preferred_name text not null,birth_year int,accessibility jsonb not null default '{"largeText":true,"highContrast":false,"voice":true,"reducedMotion":true}',created_at timestamptz not null default now());
@@ -32,7 +32,7 @@ language plpgsql
 security definer
 set search_path=public
 as $$
-declare new_family_id uuid; existing_family_id uuid;
+declare new_family_id uuid; existing_family_id uuid; new_family_code text; code_base text;
 begin
   if auth.uid() is null then raise exception 'Authentication required'; end if;
   select family_id into existing_family_id from public.profiles where id=auth.uid();
@@ -40,7 +40,10 @@ begin
   if length(trim(p_family_name))<2 or length(trim(p_display_name))<2 or length(trim(p_patient_name))<2 then
     raise exception 'Please enter valid names';
   end if;
-  insert into public.families(name) values(trim(p_family_name)) returning id into new_family_id;
+  code_base:=upper(substr(regexp_replace(trim(p_family_name),'[^A-Za-z0-9]','','g'),1,8));
+  if code_base='' then code_base:='FAMILY'; end if;
+  new_family_code:=code_base||'-'||upper(substr(replace(gen_random_uuid()::text,'-',''),1,6));
+  insert into public.families(name,family_code) values(trim(p_family_name),new_family_code) returning id into new_family_id;
   insert into public.profiles(id,family_id,role,display_name) values(auth.uid(),new_family_id,'caregiver',trim(p_display_name));
   insert into public.patients(family_id,preferred_name) values(new_family_id,trim(p_patient_name));
   return new_family_id;

@@ -1,4 +1,4 @@
-# SmritiSaathi NER v2 — SIH 26003
+# SmritiSaathi NER v5 — SIH 26003
 
 Strong functional prototype for a private, offline-friendly, multilingual cognitive gaming and memory-assistance platform for elderly people with dementia in North-East India.
 
@@ -13,8 +13,16 @@ Strong functional prototype for a private, offline-friendly, multilingual cognit
 - Medicine, hydration, meal, walk and appointment reminders
 - Engagement dashboard using accuracy, response time and hints—not a diagnostic score
 - Offline cache and local queue
+- Refresh-safe patient/caregiver session and last-page restoration
+- Automatic queued photo, reminder and game-session sync after reconnection
+- Audible local reminders while the web app/PWA remains open, online or offline
+- Caregiver-written personal clues spoken during the family-recognition game
+- A persistent device-voice selector for consistent voice choice on each device
+- Responsive mobile layout with large controls and no horizontal page overflow
 - Supabase Auth, PostgreSQL, private Storage and family-level RLS schema
 - Password login, email OTP login and secure first-family onboarding
+- One shared family login with a Patient/Caregiver choice after authentication
+- Human-readable unique family codes derived from the chosen family name
 - Render Node.js deployment configuration
 
 ## Run locally
@@ -30,7 +38,7 @@ Open `http://localhost:3000`. Demo mode works without credentials.
 
 1. Create a dedicated Supabase project.
 2. Run `supabase/schema.sql` in its SQL Editor.
-3. Existing database only: run `supabase/migration_v3_auth_onboarding.sql` once. New databases already receive it through `schema.sql`.
+3. Existing database: run `supabase/migration_v4_family_code_shared_roles.sql` once. It includes the onboarding function and unique family-code update. New databases receive these through `schema.sql`.
 4. Open `ENV_EDIT_ME.txt`, add the URL and publishable key, then rename it to exactly `.env`.
 5. New users can now create their own isolated family space after their first verified login. `seed_template.sql` is only for presentation demo data.
 6. Never put a service-role key in the browser, GitHub or Render frontend.
@@ -52,3 +60,7 @@ Push this folder to GitHub. In Render select **New → Blueprint**, connect the 
 ## Medical boundary
 
 This supports engagement and caregiver coordination. It does not diagnose, treat or cure dementia. Clinical, caregiver, patient, ethics and privacy review are required before a real-world pilot.
+
+## Browser reminder boundary
+
+Offline reminders and speech work while the installed PWA or browser page is open. An ordinary web page cannot reliably wake a fully closed browser at an exact time. Guaranteed closed-app alarms require a native Android wrapper/background scheduler or approved web-push service in a later production phase.
