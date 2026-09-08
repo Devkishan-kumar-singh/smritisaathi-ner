@@ -1,7 +1,8 @@
-const CACHE='smriti-v15-live-sync';
-const CORE=['/','/styles.css','/auth-v4.css','/mobile-v5.css','/app.js','/resilience-v5.js','/manifest.webmanifest'];
+const CACHE='smriti-v16-instant-sync';
+const CORE=['/','/styles.css','/auth-v4.css','/mobile-v5.css','/manifest.webmanifest'];
 self.addEventListener('install',event=>event.waitUntil(caches.open(CACHE).then(cache=>cache.addAll(CORE)).then(()=>self.skipWaiting())));
 self.addEventListener('activate',event=>event.waitUntil(caches.keys().then(keys=>Promise.all(keys.filter(key=>key!==CACHE).map(key=>caches.delete(key)))).then(()=>clients.claim())));
+self.addEventListener('message',event=>{if(event.data?.type==='SKIP_WAITING')self.skipWaiting()});
 self.addEventListener('fetch',event=>{
   if(event.request.method!=='GET'||event.request.url.includes('.supabase.co')||event.request.url.includes('/api/'))return;
   event.respondWith(
@@ -22,4 +23,3 @@ self.addEventListener('fetch',event=>{
   );
 });
 self.addEventListener('notificationclick',event=>{event.notification.close();event.waitUntil(clients.matchAll({type:'window',includeUncontrolled:true}).then(windows=>{for(const client of windows){if('focus'in client)return client.focus()}return clients.openWindow('/')}))});
-

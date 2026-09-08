@@ -36,7 +36,7 @@ http.createServer((req,res)=>{
       });
       return;
     }
-    const current=emergencyStore[familyId]||emergencyStore['default']||defaultEmergency;
+    const current=familyId==='default'?(emergencyStore['default']||defaultEmergency):(emergencyStore[familyId]||null);
     return res.end(JSON.stringify({ok:true,emergency:current,familyId}));
   }
   const safe=path.normalize(pathname).replace(/^(\.\.[/\\])+/,''),requested=path.join(root,safe==='/'?'index.html':safe);
