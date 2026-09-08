@@ -10,7 +10,35 @@ html,body{max-width:100%;overflow-x:hidden}main,.page,.panel,.play-card,.patient
   .home-columns,.dash-grid,.content-grid,.metrics,.reminder-grid{grid-template-columns:1fr}.panel{padding:19px;border-radius:20px}.metrics{gap:11px}.metrics article{padding:18px}.metrics strong{font-size:1.9rem}
   .play-card{padding:16px;border-radius:20px}.play-head,.play-footer{display:grid;grid-template-columns:1fr;gap:12px}.play-head .soft,.play-footer .soft{width:100%;min-height:52px}.game-stage{min-height:280px;padding:16px}.choices{grid-template-columns:1fr;gap:11px}.choice{min-width:0;width:100%;min-height:68px}.choice.photo{min-height:160px}
   .reminder-row{align-items:flex-start;flex-wrap:wrap}.reminder-row p{min-width:calc(100% - 90px)}.reminder-row button{margin-left:auto;min-height:44px}
-  .memory-cards{grid-template-columns:1fr}.memory-card .photo{height:230px}.chart{width:100%;overflow:hidden}.session-row{grid-template-columns:1.25fr repeat(3,.75fr);gap:5px;padding:10px 4px;font-size:.72rem}
+  .memory-cards{grid-template-columns:1fr}.memory-card .photo{height:230px}
+  .chart{height:190px;padding:15px 4px 34px;gap:clamp(3px,1vw,8px);overflow:visible!important}
+  .chart-day{gap:2px}
+  .chart-day i{max-width:11px;min-width:3px;border-radius:4px 4px 0 0}
+  .chart-day label{font-size:.66rem;bottom:-25px}
+  .legend{margin-top:18px;gap:10px;font-size:.74rem}
+  .session-row{grid-template-columns:1.25fr repeat(3,.75fr);gap:5px;padding:10px 4px;font-size:.72rem}
+  .patient-top-bar{flex-direction:column;align-items:stretch;gap:10px}
+  .adaptive-pill{width:100%;justify-content:center;padding:9px 14px;font-size:.84rem}
+  .emergency-trigger{width:100%;min-height:52px;justify-content:center;font-size:1.02rem;border-radius:16px}
+  .emergency-modal{padding:12px}
+  .emergency-card{width:100%;padding:20px 16px;border-radius:24px;max-height:92vh;overflow-y:auto}
+  .emergency-head{margin-bottom:12px}
+  .emergency-head h2{font-size:1.5rem}
+  .emergency-subtitle{font-size:.9rem}
+  .emergency-call-btn{min-height:58px;font-size:1.08rem;padding:0 12px}
+  .emergency-sub-actions{grid-template-columns:1fr;gap:9px}
+  .emergency-sub-btn{min-height:48px;font-size:.9rem}
+  .home-address-block p{font-size:1.02rem}
+  .caregiver-head-actions{flex-direction:column;align-items:flex-start;gap:8px}
+  .doctor-report-card{padding:18px 14px;border-radius:18px;margin:10px auto;max-height:92vh;overflow-y:auto}
+  .report-toolbar{flex-direction:column;align-items:stretch;gap:10px}
+  .report-toolbar button{width:100%}
+  .report-meta-grid{grid-template-columns:1fr;gap:10px}
+  .report-stats-grid{grid-template-columns:1fr 1fr;gap:9px}
+  .clinical-doc-head{flex-direction:column;gap:10px}
+  .clinical-tag{text-align:left}
+  .report-table{font-size:.74rem}
+  .report-table th,.report-table td{padding:8px 5px}
   .auth{display:block;min-height:100svh;padding-bottom:24px}.auth-brand{padding:30px 22px 10px}.auth-brand .trust{display:none}.auth-card{width:calc(100% - 24px);margin:10px 12px 22px;padding:22px;border-radius:24px}.auth-heading h2{font-size:1.7rem}.secure-mark{width:46px;height:46px}.auth-tabs{margin:18px 0}.otp-code{letter-spacing:.22em}
   .onboarding{padding:10px}.onboarding-card,.role-chooser-card{width:100%;padding:22px;border-radius:24px}.two-fields,.role-choice-grid{grid-template-columns:1fr}.role-choice{min-height:132px;padding:19px}
 }
