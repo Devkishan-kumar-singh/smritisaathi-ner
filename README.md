@@ -16,6 +16,8 @@ Strong functional prototype for a private, offline-friendly, multilingual cognit
 - Refresh-safe patient/caregiver session and last-page restoration
 - Automatic queued photo, reminder and game-session sync after reconnection
 - Audible local reminders while the web app/PWA remains open, online or offline
+- One-tap sound activation, audible test, missed-reminder recovery and 30-second cloud refresh
+- Persistent service-worker notifications when browser permission is granted
 - Caregiver-written personal clues spoken during the family-recognition game
 - A persistent device-voice selector for consistent voice choice on each device
 - Responsive mobile layout with large controls and no horizontal page overflow

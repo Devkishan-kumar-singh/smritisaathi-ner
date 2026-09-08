@@ -16,3 +16,5 @@ html,body{max-width:100%;overflow-x:hidden}main,.page,.panel,.play-card,.patient
 }
 @media(max-width:380px){.shell main{padding-left:10px;padding-right:10px}.header-actions{grid-template-columns:1fr 48px 48px}.game-card{grid-template-columns:52px 1fr}.game-card .game-icon{width:52px;height:52px}.auth-card{padding:18px}.role-chooser-card,.onboarding-card{padding:18px}}
 @media(prefers-reduced-motion:reduce){.page{animation:none}}
+.reminder-enable-panel{display:flex;align-items:center;gap:14px;margin:0 0 20px;padding:14px 16px;border:2px solid #8fc8ba;border-radius:18px;background:#effcf7}.reminder-enable-panel button{flex:0 0 auto}.reminder-enable-panel p{margin:0;font-weight:700;color:#264b44}.reminder-enable-panel [data-kind="error"]{color:#a3261c}.reminder-test{margin-left:auto;white-space:nowrap}
+@media(max-width:760px){.reminder-enable-panel{align-items:stretch;flex-direction:column}.reminder-enable-panel button{width:100%;min-height:56px}.reminder-test{width:100%;margin-left:0;min-height:48px}}

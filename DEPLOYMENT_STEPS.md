@@ -23,6 +23,9 @@ Replace the existing project contents with this package, but keep your local `.e
 - Confirm another account cannot access the first family's photos or records.
 - On a phone, confirm the page has no horizontal overflow and all four bottom-navigation items remain visible.
 - Choose a voice in Settings, press **Test reminder voice**, and confirm the choice remains after refresh.
+- On the Patient Home page, press **Enable reminder sound** once on each device/browser.
+- In Caregiver Reminders, press **Play now** to verify the exact saved message immediately.
+- Create a reminder two minutes ahead, keep the PWA open, and verify the beep, spoken message and system notification.
 - Add a family photo with a personal clue; confirm the clue is spoken in the family-recognition activity.
 - While the page is open, turn off the internet, add a reminder/photo/game result, restore the internet and confirm automatic sync.
 - Refresh while using the Patient dashboard and confirm the same role/page returns without another role selection.
