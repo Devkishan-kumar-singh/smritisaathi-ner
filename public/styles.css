@@ -6,3 +6,79 @@
 
 /* Calm glass presentation theme */
 body{background:radial-gradient(circle at 12% 8%,#e7f7ff 0,transparent 30%),radial-gradient(circle at 88% 18%,#e8e9ff 0,transparent 28%),linear-gradient(145deg,#f5f9ff,#eef5fb 52%,#f8fbff);background-attachment:fixed}.auth{position:relative;overflow:hidden;background:linear-gradient(135deg,#06275f 0%,#0b4c91 52%,#087e88 100%)}.auth-orb{position:absolute;border-radius:50%;pointer-events:none;opacity:.48;animation:floatOrb 8s ease-in-out infinite}.orb-one{width:340px;height:340px;left:-90px;top:-110px;background:radial-gradient(circle,#4ee7dc55,transparent 68%)}.orb-two{width:430px;height:430px;right:-130px;bottom:-180px;background:radial-gradient(circle,#9088ff66,transparent 68%);animation-delay:-3s}.auth-brand,.auth-card{position:relative;z-index:1}.auth-brand{padding:clamp(42px,8vw,120px)}.auth-brand h1{letter-spacing:-.045em;line-height:1.02}.auth-brand h1 span{display:block;color:#8bf3e5}.auth-eyebrow{font-size:.78rem!important;letter-spacing:.15em;font-weight:850;color:#8bf3e5!important;margin:25px 0 8px}.trust span{background:#ffffff0e;backdrop-filter:blur(10px);border-color:#ffffff38}.trust span::before{content:'✓';margin-right:8px;color:#7ef1dd}.glass{background:linear-gradient(145deg,rgba(255,255,255,.96),rgba(245,251,255,.88));border:1px solid rgba(255,255,255,.74);backdrop-filter:blur(22px);-webkit-backdrop-filter:blur(22px)}.auth-card{width:min(580px,calc(100% - 40px));margin:clamp(20px,6vw,90px);padding:clamp(26px,4vw,45px);border-radius:32px}.auth-heading{display:flex;justify-content:space-between;gap:18px}.secure-mark{width:54px;height:54px;display:grid;place-items:center;border-radius:17px;background:linear-gradient(145deg,#dff9f2,#e5edff);color:#067568;font-size:1.6rem}.auth-tabs{display:grid;grid-template-columns:1fr 1fr;gap:7px;background:#e9f0f8;padding:6px;border-radius:16px;margin:25px 0 20px}.auth-tab{min-height:48px;border:0;border-radius:12px;background:transparent;color:#52647e;font-weight:850}.auth-tab.active{background:white;color:var(--blue);box-shadow:0 5px 18px rgba(32,66,114,.12)}.auth-method{gap:16px}.auth-method label,.onboarding-card label{font-size:.88rem;color:#344762}.auth-method input{margin-top:7px;min-height:54px;background:#ffffffd9;transition:border-color .18s,box-shadow .18s}.auth-method input:focus,.onboarding-card input:focus{outline:0;border-color:#2a65df;box-shadow:0 0 0 4px #2965df1c}.auth-submit{min-height:54px;background:linear-gradient(135deg,#2156d9,#1778c7);box-shadow:0 10px 24px rgba(33,86,217,.22);transition:transform .18s,box-shadow .18s}.auth-submit:hover{transform:translateY(-2px);box-shadow:0 14px 30px rgba(33,86,217,.29)}.secondary-auth{min-height:49px;border:1px solid #cedaea;background:#f8fbff;color:#294666;border-radius:14px;font-weight:800}.form-note,.otp-sent{font-size:.85rem;color:#64748b;line-height:1.5}.otp-code{text-align:center;font-size:1.65rem!important;font-weight:900;letter-spacing:.35em}.back-link{width:max-content;border:0;background:transparent;color:var(--blue);padding:0;font-weight:800}.auth-message{display:none;margin-top:14px;padding:12px 14px;border-radius:12px;background:#edf4ff;color:#24518e;font-size:.86rem;line-height:1.45}.auth-message.show{display:block}.auth-message.error{background:#fff0ee;color:#a43c31}.demo-access{margin-top:22px;border-top:1px solid #dde7f1;padding-top:16px}.demo-access summary{cursor:pointer;color:#53657c;font-size:.85rem;font-weight:750}.demo-buttons{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:12px}.demo-buttons .role{margin:0;padding:12px;border-radius:16px}.demo-buttons .role-icon{width:42px;height:42px;border-radius:13px}.demo-buttons .role small{font-size:.7rem}.onboarding{position:fixed;inset:0;z-index:50;display:grid;place-items:center;padding:20px;background:linear-gradient(135deg,#06275fee,#087e88e8);backdrop-filter:blur(15px)}.onboarding-card{width:min(570px,100%);padding:clamp(25px,5vw,44px);border-radius:30px;display:grid;gap:15px;box-shadow:0 30px 90px rgba(2,25,62,.35)}.onboarding-card input{width:100%;min-height:52px}.panel,.game-card,.metrics article,.patient-hero,.play-card{background:linear-gradient(145deg,rgba(255,255,255,.94),rgba(248,252,255,.79));backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border-color:rgba(201,218,237,.82)}.panel,.game-card,.metrics article{transition:transform .2s ease,box-shadow .2s ease,border-color .2s ease}.panel:hover,.metrics article:hover{transform:translateY(-2px);box-shadow:0 16px 38px rgba(21,48,91,.12)}.game-card:hover{transform:translateY(-5px) scale(1.012)}nav button{transition:background .18s,transform .18s}nav button:hover{transform:translateX(3px)}.primary,.soft,.text-btn,.logout-btn,.choice{transition:transform .16s,box-shadow .16s,filter .16s}.primary:hover,.soft:hover,.logout-btn:hover{transform:translateY(-2px)}.sr-only{position:absolute!important;width:1px!important;height:1px!important;padding:0!important;margin:-1px!important;overflow:hidden!important;clip:rect(0,0,0,0)!important;white-space:nowrap!important;border:0!important}@keyframes floatOrb{0%,100%{transform:translate3d(0,0,0)}50%{transform:translate3d(18px,-14px,0)}}@media(prefers-reduced-motion:reduce){.auth-orb{animation:none}.panel,.game-card,.metrics article,.auth-submit{transition:none}}@media(max-width:760px){.auth-brand{padding:32px 24px 8px}.auth-brand h1{font-size:2.55rem}.auth-brand>p:not(.auth-eyebrow){font-size:1.05rem}.auth-card{margin:14px auto 30px;padding:24px;border-radius:25px}.demo-buttons{grid-template-columns:1fr}.onboarding-card{max-height:calc(100vh - 28px);overflow:auto}}
+
+/* --- SmritiSaathi Care & Safety Components --- */
+.patient-top-bar{display:flex;align-items:center;justify-content:space-between;gap:14px;margin-bottom:20px;flex-wrap:wrap}
+.adaptive-pill{display:inline-flex;align-items:center;gap:10px;background:#e9f8f2;border:1.5px solid #a3e3cb;color:#0b593f;padding:9px 18px;border-radius:99px;font-size:.88rem;font-weight:750;box-shadow:0 3px 10px rgba(11,89,63,.06)}
+.pill-dot{width:9px;height:9px;border-radius:50%;background:#15a66d;box-shadow:0 0 0 3px rgba(21,166,109,.25);animation:pulseDot 2.4s infinite ease-in-out}
+@keyframes pulseDot{0%,100%{transform:scale(1);opacity:1}50%{transform:scale(1.25);opacity:.7}}
+.emergency-trigger{min-height:48px;border:2px solid #e05341;background:linear-gradient(135deg,#fff2f0,#ffe9e6);color:#a82013;padding:0 20px;border-radius:16px;font-weight:850;font-size:.95rem;display:inline-flex;align-items:center;gap:9px;box-shadow:0 4px 14px rgba(224,83,65,.14);transition:all .18s ease}
+.emergency-trigger:hover,.emergency-trigger:focus{background:#b42318;color:#fff;outline:3px solid #ffcfcb;transform:translateY(-2px)}
+.report-trigger-btn{border:1.5px solid #2156d9;color:#2156d9;font-weight:800;transition:all .18s ease}
+.report-trigger-btn:hover{background:#2156d9;color:#fff}
+.caregiver-head-actions{display:flex;align-items:center;gap:12px}
+
+/* Emergency Safe Return Card Modal */
+.emergency-modal{position:fixed;inset:0;z-index:120;background:rgba(6,29,74,.68);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);display:grid;place-items:center;padding:18px}
+.emergency-card{width:min(620px,100%);padding:clamp(24px,4vw,38px);border-radius:30px;border:2px solid #ffd2cb;background:linear-gradient(145deg,#ffffff,#fffdfb);box-shadow:0 30px 85px rgba(180,35,24,.22)}
+.emergency-head{display:flex;justify-content:space-between;align-items:flex-start;gap:16px;margin-bottom:18px}
+.emergency-kicker{display:inline-block;font-size:.78rem;font-weight:900;letter-spacing:.14em;color:#b42318;background:#fee4e2;padding:5px 12px;border-radius:99px;margin-bottom:8px}
+.emergency-head h2{font-size:1.85rem;color:#10213d;margin:0 0 6px}
+.emergency-subtitle{font-size:1.02rem;line-height:1.45;color:#475569;margin:0}
+.emergency-icon-badge{font-size:2.8rem;line-height:1}
+.emergency-patient-info{background:#f8fafc;border:1.5px solid #e2e8f0;border-radius:20px;padding:18px 20px;margin:18px 0;display:grid;gap:14px}
+.patient-pill{display:flex;justify-content:space-between;align-items:center;padding-bottom:10px;border-bottom:1px solid #e2e8f0}
+.patient-pill strong{font-size:1.35rem;color:#082a63}
+.patient-pill span{background:#fef3f2;color:#b42318;font-size:.82rem;font-weight:800;padding:5px 11px;border-radius:99px}
+.home-address-block b{display:block;font-size:.88rem;color:#475569;margin-bottom:4px;letter-spacing:.03em}
+.home-address-block p{font-size:1.15rem;font-weight:750;color:#10213d;line-height:1.4;margin:0}
+.emergency-actions{display:grid;gap:12px;margin:22px 0 16px}
+.emergency-call-btn{min-height:66px;border-radius:18px;background:linear-gradient(135deg,#cf2417,#ad1d12);color:#fff!important;text-decoration:none;display:flex;align-items:center;justify-content:center;gap:14px;font-size:1.22rem;font-weight:900;box-shadow:0 12px 28px rgba(180,35,24,.32);transition:all .18s ease}
+.emergency-call-btn:hover,.emergency-call-btn:focus{background:#96150b;transform:translateY(-2px);box-shadow:0 16px 36px rgba(180,35,24,.4)}
+.emergency-sub-actions{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.emergency-sub-btn{min-height:52px;border:2px solid #dfe7f1;border-radius:15px;background:#ffffff;color:#10213d;font-size:.92rem;font-weight:800;display:flex;align-items:center;justify-content:center;gap:8px;transition:all .18s ease}
+.emergency-sub-btn:hover{border-color:#2156d9;background:#f5f8ff;transform:translateY(-1px)}
+.emergency-gps-status{font-size:.88rem;color:#076246;text-align:center;min-height:22px;margin:4px 0 0;font-weight:700}
+.emergency-close{width:100%;margin-top:10px}
+
+/* Doctor Printable Report Modal */
+.doctor-report-modal{position:fixed;inset:0;z-index:120;background:rgba(6,29,74,.72);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);overflow-y:auto;padding:24px 16px}
+.doctor-report-card{max-width:840px;margin:20px auto;background:#ffffff;border-radius:26px;padding:clamp(24px,4vw,42px);box-shadow:0 35px 90px rgba(0,0,0,.3)}
+.report-toolbar{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:28px;padding-bottom:18px;border-bottom:2px solid #e2e8f0}
+.print-btn{display:inline-flex;align-items:center;gap:8px;font-size:1rem;padding:12px 24px}
+.close-report-btn{min-height:48px;padding:0 22px}
+
+/* Report Internal Document Layout */
+.clinical-doc-head{border-bottom:3px solid #082a63;padding-bottom:18px;margin-bottom:22px;display:flex;justify-content:space-between;align-items:flex-start}
+.clinical-logo{font-size:1.6rem;font-weight:900;color:#082a63;letter-spacing:-.02em}
+.clinical-logo span{color:#19b9ba}
+.clinical-doc-head h1{font-size:1.35rem;margin:6px 0 3px;color:#10213d}
+.clinical-doc-head p{font-size:.84rem;color:#64748b;margin:0}
+.clinical-tag{background:#eef4ff;color:#2156d9;font-size:.76rem;font-weight:850;padding:6px 12px;border-radius:8px;text-align:right}
+.report-meta-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;background:#f8fafc;border:1px solid #e2e8f0;border-radius:16px;padding:16px;margin-bottom:22px}
+.report-meta-item small{display:block;font-size:.75rem;color:#64748b;font-weight:700;text-transform:uppercase;letter-spacing:.05em}
+.report-meta-item strong{font-size:.98rem;color:#10213d;margin-top:3px;display:block}
+.clinical-alert-box{background:#fdfcf3;border-left:4px solid #e8a817;padding:12px 16px;border-radius:0 12px 12px 0;font-size:.84rem;color:#6c4b00;line-height:1.5;margin-bottom:24px}
+.report-stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:26px}
+.report-stat-card{border:1.5px solid #e2e8f0;border-radius:16px;padding:16px;text-align:center;background:#fff}
+.report-stat-card small{display:block;font-size:.76rem;color:#64748b;font-weight:750}
+.report-stat-card strong{display:block;font-size:1.8rem;color:#2156d9;margin:6px 0 2px}
+.report-stat-card span{display:block;font-size:.74rem;color:#15a66d;font-weight:700}
+.clinical-section-title{font-size:1.05rem;font-weight:850;color:#082a63;margin:24px 0 12px;border-bottom:1.5px solid #e2e8f0;padding-bottom:6px}
+.report-table{width:100%;border-collapse:collapse;margin-bottom:24px;font-size:.88rem}
+.report-table th{background:#f1f5f9;text-align:left;padding:10px 14px;color:#334155;font-weight:800;border:1px solid #e2e8f0}
+.report-table td{padding:11px 14px;border:1px solid #e2e8f0;color:#1e293b}
+.report-table tr:nth-child(even){background:#f8fafc}
+.report-notes-box{border:1.5px dashed #cbd5e1;border-radius:16px;padding:18px;min-height:90px;background:#fafcff;margin-top:16px}
+.report-notes-box b{display:block;font-size:.82rem;color:#475569;margin-bottom:8px}
+.report-doc-footer{margin-top:28px;padding-top:16px;border-top:1px solid #e2e8f0;display:flex;justify-content:space-between;font-size:.78rem;color:#64748b}
+
+/* Print Specific Rules */
+@media print{
+  body{background:#fff!important;color:#000!important}
+  #shell,.report-toolbar,#toast,.auth,.onboarding,#emergencyModal{display:none!important}
+  .doctor-report-modal{position:static!important;background:#fff!important;padding:0!important;backdrop-filter:none!important;-webkit-backdrop-filter:none!important;overflow:visible!important;display:block!important}
+  .doctor-report-card{box-shadow:none!important;border:none!important;margin:0!important;padding:0!important;max-width:100%!important;border-radius:0!important}
+  .report-table th{background:#eee!important;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  .report-stat-card,.report-meta-grid{border-color:#bbb!important;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+}
