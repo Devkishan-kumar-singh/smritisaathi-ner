@@ -1,0 +1,10 @@
+.two-fields{display:grid;grid-template-columns:1fr 1fr;gap:13px}
+.role-chooser-card{width:min(680px,100%);padding:clamp(26px,5vw,48px);border-radius:32px;box-shadow:0 30px 90px rgba(2,25,62,.35)}
+.family-code-card{display:grid;gap:5px;margin:22px 0;padding:18px 20px;border-radius:18px;background:linear-gradient(135deg,#e8f3ff,#e4faf5);border:1px solid #cfe3ed}
+.family-code-card span,.family-code-card small{color:#5c6f86}.family-code-card strong{font-size:1.35rem}.family-code-card b{color:#135bc5;letter-spacing:.08em}
+.role-choice-grid{display:grid;grid-template-columns:1fr 1fr;gap:15px;margin:20px 0}
+.role-choice{min-height:190px;padding:24px;border:2px solid #d8e4f0;border-radius:23px;background:#ffffffc9;text-align:left;color:var(--ink);transition:transform .18s,border-color .18s,box-shadow .18s}
+.role-choice:hover,.role-choice:focus{transform:translateY(-4px);border-color:#2c69d9;box-shadow:0 14px 30px rgba(31,83,157,.15);outline:0}
+.role-choice span,.role-choice b,.role-choice small{display:block}.role-choice span{font-size:2rem;margin-bottom:18px}.role-choice b{font-size:1.1rem;margin-bottom:7px}.role-choice small{color:#607189;line-height:1.45}
+.patient-choice span{color:#2469d8}.caregiver-choice span{color:#cf4f62}.role-chooser-card>.secondary-auth{width:100%}
+@media(max-width:620px){.two-fields,.role-choice-grid{grid-template-columns:1fr}.role-choice{min-height:145px}.role-chooser-card{max-height:calc(100vh - 28px);overflow:auto}}
