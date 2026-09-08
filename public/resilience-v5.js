@@ -31,6 +31,8 @@ $('#language').addEventListener('change',refreshVoiceChoices);
 
 const originalStartGame=startGame;
 startGame=function(id){const shouldAddClue=id==='faces'&&state.people[0]?.clue&&$('#voiceGuide').checked;if(shouldAddClue)$('#voiceGuide').checked=false;originalStartGame(id);if(shouldAddClue){$('#voiceGuide').checked=true;setTimeout(()=>speak(`${gameCopy(activeGame)[2]} ${state.people[0].clue}`),120)}};
+const originalRenderFaces=renderFaces;
+renderFaces=function(){if(state.people.length)return originalRenderFaces();stage('<div class="empty-game"><h2>Family memory is ready for setup</h2><p>Your other cognitive games are available now. A caregiver can add a familiar person later to activate this personalised activity.</p><button id="emptyGameLibrary" class="primary" type="button">View all activities</button></div>');$('#emptyGameLibrary').onclick=()=>showPage('games')};
 $('#hintBtn').onclick=()=>{if(!activeGame)return;hints++;const personal=activeGame.id==='faces'&&state.people[0]?.clue?state.people[0].clue:gameCopy(activeGame)[2],message=`${pt().takeTime} ${personal}`;$('#gameFeedback').textContent=message;speak(message)};
 
 async function compressPhoto(file){return new Promise((resolve,reject)=>{const reader=new FileReader();reader.onerror=reject;reader.onload=()=>{const img=new Image();img.onerror=reject;img.onload=()=>{const max=1400,scale=Math.min(1,max/Math.max(img.width,img.height)),canvas=document.createElement('canvas');canvas.width=Math.round(img.width*scale);canvas.height=Math.round(img.height*scale);canvas.getContext('2d').drawImage(img,0,0,canvas.width,canvas.height);resolve(canvas.toDataURL('image/jpeg',.82))};img.src=reader.result};reader.readAsDataURL(file)})}
