@@ -51,4 +51,8 @@ html,body{max-width:100%;overflow-x:hidden}main,.page,.panel,.play-card,.patient
 @media(max-width:760px){
   .onboarding{place-items:start center}
   .onboarding-card,.role-chooser-card{max-height:none;overflow:visible}
+  .auth,.auth-card,.auth-method,.auth-method>*{min-width:0;max-width:100%}
+  .auth-card{overflow:hidden}
+  .auth-method input,.auth-method button{width:100%}
+  .auth-method .otp-code{font-size:1.35rem!important;letter-spacing:.16em!important;padding-left:12px;padding-right:12px}
 }
