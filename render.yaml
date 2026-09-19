@@ -1,6 +1,9 @@
 services:
   - type: web
     name: smritisaathi-ner
+    repo: https://github.com/Devkishan-kumar-singh/smritisaathi-ner
+    branch: main
+    autoDeployTrigger: commit
     runtime: node
     plan: free
     buildCommand: npm install
