@@ -8,3 +8,5 @@
 .role-choice span,.role-choice b,.role-choice small{display:block}.role-choice span{font-size:2rem;margin-bottom:18px}.role-choice b{font-size:1.1rem;margin-bottom:7px}.role-choice small{color:#607189;line-height:1.45}
 .patient-choice span{color:#2469d8}.caregiver-choice span{color:#cf4f62}.role-chooser-card>.secondary-auth{width:100%}
 @media(max-width:620px){.two-fields,.role-choice-grid{grid-template-columns:1fr}.role-choice{min-height:145px}.role-chooser-card{max-height:calc(100vh - 28px);overflow:auto}}
+
+@media(max-width:620px){.role-chooser-card{max-height:none;overflow:visible}}
