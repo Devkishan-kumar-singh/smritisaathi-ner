@@ -108,6 +108,7 @@ body{background:radial-gradient(circle at 12% 8%,#e7f7ff 0,transparent 30%),radi
 .choice.pair:disabled{opacity:1;background:#eef8f5;border-color:#8fc8ba}
 .game-stage .choice.pair{font-size:clamp(4rem,8vw,6rem)!important;min-height:150px!important}
 .game-stage .choice-object{font-size:clamp(3rem,5vw,4.5rem)!important;min-width:1.2em}
+.recognition-bar{background:#e66d9d}.language-bar{background:#249fd0}.orientation-bar{background:#dc624b}.recognition-dot{background:#e66d9d}.language-dot{background:#249fd0}.orientation-dot{background:#dc624b}
 .completion-actions{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin-top:18px}
 .completion-actions button{min-height:52px;padding:12px 20px}
 

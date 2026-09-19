@@ -1,4 +1,4 @@
-const CACHE='smriti-v16-instant-sync';
+const CACHE='smriti-v17-expanded-games';
 const CORE=['/','/styles.css','/auth-v4.css','/mobile-v5.css','/manifest.webmanifest'];
 self.addEventListener('install',event=>event.waitUntil(caches.open(CACHE).then(cache=>cache.addAll(CORE)).then(()=>self.skipWaiting())));
 self.addEventListener('activate',event=>event.waitUntil(caches.keys().then(keys=>Promise.all(keys.filter(key=>key!==CACHE).map(key=>caches.delete(key)))).then(()=>clients.claim())));
